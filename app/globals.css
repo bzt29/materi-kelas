@@ -24,3 +24,51 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.space-board {
+  --cell-gap: 0.5rem;
+}
+
+.space-astronaut {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition-property: none;
+}
+
+.space-travelling {
+  transition-property: left, top;
+  transition-timing-function: ease-in-out;
+}
+
+.space-walk {
+  display: inline-block;
+  animation: space-moonwalk 360ms ease-in-out;
+}
+
+.space-float {
+  animation: space-float 3s ease-in-out infinite;
+}
+
+@keyframes space-moonwalk {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  25% { transform: translateY(-7px) rotate(-9deg); }
+  55% { transform: translateY(-3px) rotate(8deg); }
+  80% { transform: translateY(-6px) rotate(-5deg); }
+}
+
+@keyframes space-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+@media (min-width: 640px) {
+  .space-board { --cell-gap: 0.625rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .space-travelling { transition: none; }
+  .space-walk, .space-float { animation: none; }
+}

@@ -1,0 +1,18 @@
+Rencana Pembuatan Web (Planning)
+Tech Stack: Next.js (App Router), React, Tailwind CSS, dan Lucide React (untuk ikon).
+
+Layout UI:
+
+Kiri/Atas: Papan permainan (Grid 5x5 atau 6x6) bernuansa luar angkasa.
+
+Kanan/Bawah: Panel kontrol dengan tombol panah besar dan daftar antrean perintah (kode).
+
+Logika Permainan:
+
+Aktor: Astronot (👨‍🚀) di titik awal, Roket (🚀) di titik akhir, dan Meteor (☄️) sebagai rintangan.
+
+Sistem Antrean: Anak-anak memasukkan arah, perintah masuk ke kotak "Kode Perintah" sebelum dijalankan.
+
+Eksekusi: Saat ditekan tombol "JALANKAN", astronot bergerak satu per satu (ada jeda waktu 0.5 detik tiap langkah) agar anak-anak bisa melihat proses coding dieksekusi.
+
+Kondisi Menang/Kalah: Menang jika tepat di koordinat roket. Kalah jika keluar garis grid atau menabrak meteor.
